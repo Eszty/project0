@@ -1,1 +1,1 @@
-Welcome to the project0 wiki!
+* [[Proposal]]
