@@ -1,0 +1,21 @@
+TABLES
+
+Courses:
+	id
+	fac_id
+	
+Users:
+	id
+	
+Taking:
+	course_id
+	users_id
+
+Shopping:
+	course_id
+	user_id
+	
+Faculty:
+	id
+	name
+
