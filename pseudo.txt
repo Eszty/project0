@@ -1,0 +1,5 @@
+Browse:
+    Get input department
+    Get input education
+    
+    FROM table GET courses WHERE dep == department
