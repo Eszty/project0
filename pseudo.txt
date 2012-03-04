@@ -1,5 +1,11 @@
+DISCLAIMER: Dit is mijn 'brainstorm' text file. Staat weinig nuttigs in.
+
+
 Browse:
     Get input department
     Get input education
     
-    FROM table GET courses WHERE dep == department
+    FROM table GET courses WHERE dep == department AND edu == education
+    
+    
+
