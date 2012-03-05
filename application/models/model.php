@@ -6,7 +6,7 @@ class Model extends CI_Model {
     # Function to get the content of the table 'courses'
 	public function get_courses() 
 	{
-    	return $this->db->order_by('title', 'desc')->get('courses')->result();
+    	return $this->db->order_by('title', 'asc')->get('courses')->result();
 	}
 	
 	public function get_users()
@@ -16,7 +16,13 @@ class Model extends CI_Model {
     
     public function get_taking()
     {
-        return $this->db->get('taking')->result();
+        $user_id = 3;
+        $c_id= $this->db->get_where('taking', array('user_id'=>$user_id))->result();
+        var_dump($c_id);
+        foreach ($c_id as $cor_id)
+        {
+           return $this->db->get_where('courses', array('course_id'=>$cor_id))->result();
+        }
     }
     
     public function get_shopping()
@@ -26,7 +32,8 @@ class Model extends CI_Model {
     
     public function get_faculty()
     {
-        return $this->db->get('faculty')->result();
+        $dep = "MUSC";
+        return $this->db->get_where('courses', array('dep_code'=>$dep))->result();
 	}
 	
 }
