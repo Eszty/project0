@@ -3,6 +3,13 @@ TABLES
 Courses:
 	id
 	fac_id
+	cat_num
+	title
+	description
+	instructor
+	location
+	day
+	begin_time
 	
 Users:
 	id
