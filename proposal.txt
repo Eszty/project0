@@ -1,0 +1,9 @@
+App desinged for smartphone (device-with): Elise
+Support Spring 2012 courses: Elise
+User able to browse courses on the faculty: Eszter
+User able to browse courses by Education: Eszter
+User able to search for courses by keywords (catalog number, title, description, instructor's name): Eszter
+User able to search for courses by day and time: Eszter
+User able to see courses's catalog numbers, titles, departments, description, instructors, locations and days and times: Eszter
+User able to add courses to lists calles "Courses I'm shopping" and "Courses I'm taking". User must be able to browse these lists: Elise
+User able to browse courses they recently viewed (List called "Recently viewed"): Elise
