@@ -15,7 +15,6 @@ class Model extends CI_Model {
         # ==> get from courses where ...
         
         $catalog_nr = $this->input->post();
-        var_dump($catalog_nr);
     }
 
 

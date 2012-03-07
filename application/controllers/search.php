@@ -10,7 +10,6 @@ class Search extends CI_Controller {
         {
             $this->load->model('Model');
             $this->Model->search($data);
-            var_dump($data);
             header('Location: /search');
         }
         else 
