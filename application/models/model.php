@@ -5,7 +5,17 @@ class Model extends CI_Model {
 
     public function search()
     {
-        #search funtion coming
+        # Inputs:
+            # catalog_nr
+            # title
+            # description
+            # instructor_name
+            # day
+            # begin_time
+        # ==> get from courses where ...
+        
+        $catalog_nr = $this->input->post();
+        var_dump($catalog_nr);
     }
 
 
