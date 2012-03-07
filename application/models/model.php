@@ -17,8 +17,8 @@ class Model extends CI_Model {
     # Function to get the content of the table 'courses'
 	public function get_courses($data) 
 	{
+	    var_dump('1');
 	    var_dump($data);
-	    var_dump('poep');
     	return $this->db->order_by('title', 'asc')->get('courses')->result();
 	}
 	
