@@ -1,14 +1,14 @@
-<!doctype html>
-<html>
-    <head>
-        <title>Taking</title>
-    </head>
-    <body>
-        <?php
-            foreach ($posts as $post):
-                foreach ($post as $post_c): ?>
-                    <p><?php echo $post_c->title; ?></p>
-                <?php endforeach; ?>
-            <?php endforeach; ?>
-    </body>
-</html>
+<?php 
+
+class Taking extends CI_Controller 
+{
+    public function index() 
+    {
+        $this->load->model('Model');
+        $posts = $this->Model->get_taking();
+        var_dump($posts);
+        $this->load->view('views/taking.php', array('posts' => $posts));
+    }
+}
+
+?>
