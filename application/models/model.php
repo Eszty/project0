@@ -3,8 +3,7 @@
 
 class Model extends CI_Model {
 
-    public function search()
-    {
+   
         # Inputs:
             # catalog_nr
             # title
@@ -14,13 +13,14 @@ class Model extends CI_Model {
             # begin_time
         # ==> get from courses where ...
         
-        $catalog_nr = $this->input->post();
-    }
+
+   
 
 
     # Function to get the content of the table 'courses'
 	public function get_courses() 
 	{
+	    var_dump('poep');
     	return $this->db->order_by('title', 'asc')->get('courses')->result();
 	}
 	
