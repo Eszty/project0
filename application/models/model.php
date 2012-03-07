@@ -3,42 +3,59 @@
 
 class Model extends CI_Model {
 
+    public function search()
+    {
+        #search funtion coming
+    }
+
+
     # Function to get the content of the table 'courses'
 	public function get_courses() 
 	{
     	return $this->db->order_by('title', 'asc')->get('courses')->result();
 	}
 	
+	# Get the users
 	public function get_users()
 	{
 	    return $this->db->get('users')->result();
     }
     
+    # Get the courses that the user is taking
     public function get_taking()
     {
         $user_id = 2;
         $this->db->select('course_id');
         $c_id= $this->db->get_where('taking', array('user_id'=>$user_id))->result();
-        #var_dump($c_id);
-        
+                
         $array=array();
         foreach ($c_id as $cor_id)
-        {
-           #var_dump($cor_id);
-           #var_dump($cor_id);
+        {          
            $a= $this->db->get_where('courses', array('id'=>($cor_id->course_id)))->result();
            array_push($array,$a);
-           #var_dump($array);
         }
-        #var_dump($array);
+        
         return $array;
     }
     
+    # Get the courses that the user is shopping
     public function get_shopping()
     {
-        return $this->db->get('shopping')->result();
+        $user_id = 1;
+        $this->db->select('course_id');
+        $c_id= $this->db->get_where('shopping', array('user_id'=>$user_id))->result();
+                
+        $shop_array=array();
+        foreach ($c_id as $cor_id)
+        {          
+           $a= $this->db->get_where('courses', array('id'=>($cor_id->course_id)))->result();
+           array_push($shop_array,$a);
+        }
+        
+        return $shop_array;
     }
     
+    # Get the courses from a specific department
     public function get_faculty()
     {
         $dep = "MUSC";

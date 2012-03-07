@@ -6,7 +6,7 @@ class Taking extends CI_Controller
     {
         $this->load->model('Model');
         $posts = $this->Model->get_taking();
-        var_dump($posts);
+        #var_dump($posts);
         $this->load->view('views/taking.php', array('posts' => $posts));
     }
 }
