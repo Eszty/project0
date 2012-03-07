@@ -1,13 +1,12 @@
-
 <!doctype html>
 <html>
     <head>
-        <title>Shopping</title>
+        <title>Search</title>
     </head>
     <body>
-        <?php
-            foreach ($posts as $post):?>
-                <p><?php echo $post_c->title; ?></p>
-            <?php endforeach; ?>
+        <h1>Search for courses</h1>
+        <form method="post">
+            <input type="text" name="catalog_number" placeholder="Catalog number" /><br />
+        </form>
     </body>
 </html>

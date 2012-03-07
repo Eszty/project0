@@ -4,12 +4,14 @@ class Search extends CI_Controller {
     public function index() 
     {
         $data = $this->input->post();
+        
 
         if ($data) 
         {
             $this->load->model('Model');
-            $this->Model->add($data);
-            header('Location: /posts');
+            $this->Model->search($data);
+            var_dump($data);
+            header('Location: /search');
         }
         else 
         {
