@@ -11,6 +11,7 @@
 
 class Search extends CI_Controller
  {
+    
     public function index() 
     {
         $data = $this->input->post();
@@ -27,6 +28,16 @@ class Search extends CI_Controller
             #$posts = $this->Model->get_taking();
             $this->load->view('views/search.php');
         }
+    }
+    
+    public function add_shop()
+    {
+        # TODO: add courses to shopping car
+    }
+    
+    public function take()
+    {
+        # TODO: add courses to taking table
     }
 }
 
