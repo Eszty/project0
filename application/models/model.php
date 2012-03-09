@@ -40,7 +40,6 @@ class Model extends CI_Model {
         	array_push($results,$t);
     	}
     	
-    	var_dump($results);
     	return $results;
 	}
 
