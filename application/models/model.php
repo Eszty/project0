@@ -52,7 +52,7 @@ class Model extends CI_Model {
     }
     
     # Get the courses that the user is taking
-    # TODO: Must be able to ADD courses tot 'taking'
+    # TODO: Must be able to ADD courses to 'taking'
     public function get_taking()
     {
         $user_id = 2;
