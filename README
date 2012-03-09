@@ -3,3 +3,8 @@ The layout is not at all pretty, but that's gonna be fixed as soon as functional
 The user now can search the database for courses (although the results contain duplicates, but that's gonna be fixed).
 The next step is to be able to add courses to your shopping cart of to the courses you're taking. This will be hopefully 
 done by the end of the evening (09-02-2012).
+
+USER GUIDE:
+To search: project0/search
+To see taking list: project0/taking
+To see shopping car: project0/shopping
