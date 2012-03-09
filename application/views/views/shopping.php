@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Taking</title>
+        <title>Shopping</title>
     </head>
     <body>
         <?php
