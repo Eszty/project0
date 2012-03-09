@@ -13,8 +13,35 @@ class Model extends CI_Model {
 	    $day = $data["day"];
 	    $time = $data["time"];
 
-    	return $this->db->get_where('courses', array('cat_num'=>$cat))->result();
+        $results = array();
+        if($cat != '')
+        {
+            $c = $this->db->get_where('courses', array('cat_num'=>$cat))->result(); 
+            array_push($results,$c);
+        }
+        if($title != '')
+        {
+        	$tit = $this->db->get_where('courses', array('title'=>$title))->result();
+        	array_push($results,$tit);
+    	}
+    	if($inst != '')
+    	{
+        	$i = $this->db->get_where('courses', array('instructor'=>$instructor))->result();
+        	array_push($results,$i);
+        }
+        if($day != '')
+        {
+        	$d = $this->db->get_where('courses', array('day'=>$day))->result();
+        	array_push($results,$d);
+    	}
+    	if($time != '')
+    	{
+        	$t = $this->db->get_where('courses', array('begin_time'=>$time))->result();
+        	array_push($results,$t);
+    	}
     	
+    	var_dump($results);
+    	return $results;
 	}
 
 	
