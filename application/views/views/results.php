@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Courses</title>
+        <title>Search Results</title>
     </head>
     <body>
         <?php
@@ -19,5 +19,8 @@
                 <p><?php echo '-----------------------------------'; ?></p>
                 <?php endforeach; ?>
         <?php endforeach; ?>
+        <form action="/shopping" method="post">
+            <input type="submit" value="Done" />
+        </form>
     </body>
 </html>

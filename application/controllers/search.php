@@ -20,7 +20,7 @@ class Search extends CI_Controller
         {
             $this->load->model('Model');
             $posts = $this->Model->get_courses($data); 
-            $this->load->view('views/courses.php', array('posts' => $posts));
+            $this->load->view('views/results.php', array('posts' => $posts));
         }
         else
         {
@@ -28,15 +28,7 @@ class Search extends CI_Controller
         }
     }
     
-    public function add_shop()
-    {
-        # TODO: add courses to shopping car
-    }
     
-    public function take()
-    {
-        # TODO: add courses to taking table
-    }
 }
 
 

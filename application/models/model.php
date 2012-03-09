@@ -95,6 +95,16 @@ class Model extends CI_Model {
         return $this->db->get_where('courses', array('dep_code'=>$dep))->result();
 	}
 	
+	public function add_shop()
+    {
+        # TODO: add courses to shopping car
+    }
+    
+    public function take()
+    {
+        # TODO: add courses to taking table
+    }
+	
 }
 
 ?>

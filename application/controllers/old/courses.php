@@ -1,10 +1,10 @@
 <?php 
 
-class Shopping extends CI_Controller 
+class Courses extends CI_Controller 
 {
     public function index() 
     {
-        $data = $this->input->post();
+        $data = $this->input->post('shop');
         var_dump($data);
         
         $this->load->model('Model');
