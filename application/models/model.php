@@ -3,18 +3,11 @@
 
 class Model extends CI_Model {
 
-<<<<<<< HEAD
     
-=======
->>>>>>> 34d3d6eeee261a0c91b222b799cd6d4a6ec3e953
    
         # Inputs:
             # catalog_nr
             # title
-<<<<<<< HEAD
-=======
-            # description
->>>>>>> 34d3d6eeee261a0c91b222b799cd6d4a6ec3e953
             # instructor_name
             # day
             # begin_time
@@ -24,7 +17,6 @@ class Model extends CI_Model {
     # Function to get the content of the table 'courses'
 	public function get_courses($data) 
 	{
-<<<<<<< HEAD
         foreach($data as $input)
         {
     	    return $this->db->get_where('courses', array('cat_num'=>$input))->result();
@@ -39,13 +31,6 @@ class Model extends CI_Model {
  
     }
 	
-=======
-	    var_dump('1');
-	    var_dump($data);
-    	return $this->db->order_by('title', 'asc')->get('courses')->result();
-	}
-	
->>>>>>> 34d3d6eeee261a0c91b222b799cd6d4a6ec3e953
 	# Get the users
 	public function get_users()
 	{
@@ -69,16 +54,6 @@ class Model extends CI_Model {
         return $array;
     }
     
-<<<<<<< HEAD
-=======
-    public function get_by_catnum()
-    {
-        $cat_num = 9428
-        $this->db->select('cat_num');
-        $c_num= $this->db->get_where('courses', array('cat_num'=>$cat_num))->result();
- 
-    }
->>>>>>> 34d3d6eeee261a0c91b222b799cd6d4a6ec3e953
     
     # Get the courses that the user is shopping
     public function get_shopping()

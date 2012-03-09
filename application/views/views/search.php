@@ -8,7 +8,6 @@
         <form action="/search" method="post">
             <input type="text" name="catalog_number" placeholder="Catalog number" /><br />
         </form>
-<<<<<<< HEAD
         <?php
             foreach ($posts as $post): ?>
             <p><?php echo $post->cat_num; ?></p>
@@ -16,7 +15,5 @@
             <p><?php echo $post->description; ?></p>
             <p><?php echo $post->instructor; ?></p>
         <?php endforeach; ?>
-=======
->>>>>>> 34d3d6eeee261a0c91b222b799cd6d4a6ec3e953
     </body>
 </html>
