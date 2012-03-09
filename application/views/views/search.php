@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+<!-- TODO: Make it look pretier -->
     <head>
         <title>Search</title>
     </head>

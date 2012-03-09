@@ -5,6 +5,7 @@ class Model extends CI_Model {
 
 
     # Function to get the content of the table 'courses'
+    # TODO: Remove duplicates
 	public function get_courses($data) 
 	{
 	    $cat = $data["catalog_number"];
@@ -51,6 +52,7 @@ class Model extends CI_Model {
     }
     
     # Get the courses that the user is taking
+    # TODO: Must be able to ADD courses tot 'taking'
     public function get_taking()
     {
         $user_id = 2;
@@ -69,6 +71,7 @@ class Model extends CI_Model {
     
     
     # Get the courses that the user is shopping
+    # TODO: Must be able to ADD to 'shopping'
     public function get_shopping()
     {
         $user_id = 1;

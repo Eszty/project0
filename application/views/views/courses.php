@@ -11,6 +11,7 @@
                 <p><?php echo $input->title; ?></p>
                 <p><?php echo $input->description; ?></p>
                 <p><?php echo $input->instructor; ?></p>
+                <p><?php echo '-----------------------------------'; ?></p>
                 <?php endforeach; ?>
         <?php endforeach; ?>
     </body>
