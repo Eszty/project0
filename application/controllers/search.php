@@ -1,6 +1,7 @@
 <?php
 
 
+
 class Search extends CI_Controller
  {
     public function index() 
@@ -9,6 +10,18 @@ class Search extends CI_Controller
         $this->load->model('Model');
         $posts = $this->Model->get_courses($data); 
         $this->load->view('views/search.php', array('posts' => $posts));
+    }
+}
+
+
+
+class Search extends CI_Controller 
+{
+    public function index() 
+    {
+        $this->load->model('Model');
+        $posts = $this->Model->get_courses();
+
     }
 }
 
