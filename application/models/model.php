@@ -95,8 +95,9 @@ class Model extends CI_Model {
         return $this->db->get_where('courses', array('dep_code'=>$dep))->result();
 	}
 	
-	public function add_shop()
+	public function add_shop($data)
     {
+        var_dump($data);
         # TODO: add courses to shopping car
     }
     
