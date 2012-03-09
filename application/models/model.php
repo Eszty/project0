@@ -50,12 +50,7 @@ class Model extends CI_Model {
         $cat_num = 9428
         $this->db->select('cat_num');
         $c_num= $this->db->get_where('courses', array('cat_num'=>$cat_num))->result();
-        $array=array();
-        foreach ($c_num as $cor_num)
-        {          
-           $a= $this->db->get_where('courses', array('id'=>($cor_num->cat_num)))->result();
-           array_push($array,$a);
-        }
+ 
     }
     
     # Get the courses that the user is shopping
