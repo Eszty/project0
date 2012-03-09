@@ -1,5 +1,12 @@
 <?php
 
+ # Inputs:
+            # catalog_nr
+            # title
+            # instructor_name
+            # day
+            # begin_time
+        # ==> get from courses where ...
 
 
 class Search extends CI_Controller
@@ -16,9 +23,9 @@ class Search extends CI_Controller
         }
         else
         {
-            $this->load->model('Model');
-            $posts = $this->Model->get_taking();
-            $this->load->view('views/search.php', array('posts' => $posts));
+            #$this->load->model('Model');
+            #$posts = $this->Model->get_taking();
+            $this->load->view('views/search.php');
         }
     }
 }

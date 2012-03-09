@@ -3,33 +3,20 @@
 
 class Model extends CI_Model {
 
-    
-   
-        # Inputs:
-            # catalog_nr
-            # title
-            # instructor_name
-            # day
-            # begin_time
-        # ==> get from courses where ...
-
 
     # Function to get the content of the table 'courses'
 	public function get_courses($data) 
 	{
-        foreach($data as $input)
-        {
-    	    return $this->db->get_where('courses', array('cat_num'=>$input))->result();
-    	}
+	    $cat = $data["catalog_number"];
+	    $title = $data["title"];
+	    $inst = $data["instructor"];
+	    $day = $data["day"];
+	    $time = $data["time"];
+
+    	return $this->db->get_where('courses', array('cat_num'=>$cat))->result();
+    	
 	}
-	
-	public function get_by_catnum($data)
-    {
-        $cat_num = 9428;
-        $this->db->select('cat_num');
-        $c_num= $this->db->get_where('courses', array('cat_num'=>$cat_num))->result();
- 
-    }
+
 	
 	# Get the users
 	public function get_users()
