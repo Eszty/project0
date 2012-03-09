@@ -1,0 +1,28 @@
+TABLES
+
+Courses:
+	id
+	fac_id
+	cat_num
+	title
+	description
+	instructor
+	location
+	day
+	begin_time
+	
+Users:
+	id
+	
+Taking:
+	course_id
+	users_id
+
+Shopping:
+	course_id
+	user_id
+	
+Faculty:
+	id
+	name
+
