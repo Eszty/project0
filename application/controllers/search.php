@@ -24,8 +24,6 @@ class Search extends CI_Controller
         }
         else
         {
-            #$this->load->model('Model');
-            #$posts = $this->Model->get_taking();
             $this->load->view('views/search.php');
         }
     }

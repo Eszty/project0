@@ -5,10 +5,10 @@
     </head>
     <body>
         <?php
+            $this->load->helper('form');
             foreach ($posts as $post): 
                 foreach ($post as $input): ?>
-                <input type="checkbox" name="check"> Shopping car <br>
-                <input type="checkbox" name="check"> Take <br>
+                <p><?php echo form_checkbox('newsletter', 'accept', False); ?></p>
                 <p><?php echo $input->cat_num; ?></p>
                 <p><?php echo $input->title; ?></p>
                 <p><?php echo $input->description; ?></p>
