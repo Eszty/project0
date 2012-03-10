@@ -13,8 +13,8 @@
                 <p><?php echo $input->title; ?></p>
                 <p><?php echo $input->description; ?></p>
                 <p><?php echo $input->instructor; ?></p>
-                <input type="checkbox" name="shop" value="1" > Shop <br> 
-                <input type="checkbox" name="take" value="2" /> Take <p>
+                <input type="checkbox" name="shop" id="shop" value="1" > Shop <br> 
+                <input type="hidden" name="shopping" value="<?php echo $input->id?>" />
                 <p><?php echo '-----------------------------------'; ?></p>
                 <?php endforeach; ?>
         <?php endforeach; ?>
