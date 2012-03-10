@@ -1,6 +1,8 @@
 <?php
 # Model for project0
 
+# TODO: which user? (for now: user 1 is used everywhere)
+
 class Model extends CI_Model {
 
 
@@ -55,7 +57,8 @@ class Model extends CI_Model {
     # TODO: Must be able to ADD courses to 'taking'
     public function get_taking()
     {
-        $user_id = 2;
+        $user_id = 1;
+        global $user_id;
         $this->db->select('course_id');
         $c_id= $this->db->get_where('taking', array('user_id'=>$user_id))->result();
                 
@@ -75,6 +78,7 @@ class Model extends CI_Model {
     public function get_shopping()
     {
         $user_id = 1;
+        global $user_id;
         $this->db->select('course_id');
         $c_id= $this->db->get_where('shopping', array('user_id'=>$user_id))->result();
                 
@@ -97,8 +101,13 @@ class Model extends CI_Model {
 	
 	public function add_shop($data)
     {
-        var_dump($data);
         # TODO: add courses to shopping car
+        
+        $user_id = '1';
+        $course_id = $data["shopping"];
+        $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
+        $this->db->insert_batch('shopping', $insertion);
+        
     }
     
     public function take()
