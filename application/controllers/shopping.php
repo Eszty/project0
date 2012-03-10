@@ -2,6 +2,7 @@
 
 class Shopping extends CI_Controller 
 {
+# TODO: new if-condition  
     public function index() 
     {
         #$data = (isset($_POST['shop']))?true:false;
@@ -18,8 +19,9 @@ class Shopping extends CI_Controller
         }
         else
         {
-            # TODO: where to link when no actions taken?
-            var_dump("TODO");
+            $this->load->model('Model');
+            $posts = $this->Model->get_shopping();
+            $this->load->view('views/shopping.php', array('posts' => $posts));
         }
     }
 }

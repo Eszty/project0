@@ -78,7 +78,6 @@ class Model extends CI_Model {
     public function get_shopping()
     {
         $user_id = 1;
-        global $user_id;
         $this->db->select('course_id');
         $c_id= $this->db->get_where('shopping', array('user_id'=>$user_id))->result();
                 
@@ -106,7 +105,7 @@ class Model extends CI_Model {
         $user_id = '1';
         $course_id = $data["shopping"];
         $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
-        $this->db->insert_batch('shopping', $insertion);
+        return $this->db->insert_batch('shopping', $insertion);
         
     }
     
