@@ -54,11 +54,9 @@ class Model extends CI_Model {
     }
     
     # Get the courses that the user is taking
-    # TODO: Must be able to ADD courses to 'taking'
     public function get_taking()
     {
         $user_id = 1;
-        global $user_id;
         $this->db->select('course_id');
         $c_id= $this->db->get_where('taking', array('user_id'=>$user_id))->result();
                 
@@ -73,8 +71,7 @@ class Model extends CI_Model {
     }
     
     
-    # Get the courses that the user is shopping
-    # TODO: Must be able to ADD to 'shopping'
+    # Get the courses that the user is shopping (list of course names)
     public function get_shopping()
     {
         $user_id = 1;
@@ -98,20 +95,23 @@ class Model extends CI_Model {
         return $this->db->get_where('courses', array('dep_code'=>$dep))->result();
 	}
 	
+	# Add courses to the shopping list of the user
 	public function add_shop($data)
-    {
-        # TODO: add courses to shopping car
-        
+    { 
         $user_id = '1';
         $course_id = $data["shopping"];
         $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
-        return $this->db->insert_batch('shopping', $insertion);
-        
+        return $this->db->insert_batch('shopping', $insertion);  
     }
     
-    public function take()
+    # Add courses from 'shopping' to 'taking'
+    # TODO: if taken, dele from shopping
+    public function take($data)
     {
-        # TODO: add courses to taking table
+        $user_id = '1';
+        $course_id = $data["shopping"];
+        $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
+        return $this->db->insert_batch('taking', $insertion);
     }
 	
 }

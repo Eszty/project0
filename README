@@ -4,6 +4,11 @@ The user now can search the database for courses (although the results contain d
 The next step is to be able to add courses to your shopping cart of to the courses you're taking. This will be hopefully 
 done by the end of the evening (09-02-2012).
 
+EDIT (10-02-2012): After searching for courses, you can check a checkbox with label 'Shop'. After klikking done,
+the checked courses will be added to your shopping car. (Still to be fixed: to be able to add more than 1 and not 
+only the last found course).
+From the shopping list you can add courses to your taking list. (TODO: same as shopping).
+
 USER GUIDE:
 To search: project0/search
 To see taking list: project0/taking

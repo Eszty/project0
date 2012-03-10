@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
+<!--TODO: If done is clicked, only the last course will be added,
+even when more are checked and/or the last one is NOT checked -->
     <head>
         <title>Search Results</title>
     </head>
     <body>
         <form action="/shopping" method="post">
         <?php
-            $this->load->helper('form');
             foreach ($posts as $post): 
                 foreach ($post as $input): ?>          
                 <p><?php echo $input->cat_num; ?></p>
