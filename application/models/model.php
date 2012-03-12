@@ -135,17 +135,15 @@ class Model extends CI_Model {
             $this->db->insert_batch('taking', $insertion);
             $where = array('course_id'=>$course_id, 'user_id'=>$user_id);
             $this->db->delete('shopping', $where);
-        }
-        
-        
+        } 
     }
     
-    public function xmlparse($data)
+    public function xmlparse()
     {
        $xmlstr = "http://cdn.cs164.net/2012/spring/projects/0/courses.xml" 
        foreach ($xml->course as $course) 
        {
-       echo $book->plot, '<br />';
+            echo $book->plot, '<br />';
        }
     }
 	
