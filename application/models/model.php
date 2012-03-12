@@ -109,9 +109,14 @@ class Model extends CI_Model {
     public function take($data)
     {
         $user_id = '1';
-        $course_id = $data["shopping"];
-        $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
-        return $this->db->insert_batch('taking', $insertion);
+        $course_id_a = $data["shop"];
+        foreach($course_id_a as $course_id)
+        {
+            $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
+            $this->db->insert_batch('taking', $insertion);
+        }
+        
+        
     }
 	
 }
