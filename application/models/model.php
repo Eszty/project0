@@ -99,13 +99,16 @@ class Model extends CI_Model {
 	public function add_shop($data)
     { 
         $user_id = '1';
-        $course_id = $data["shopping"];
-        $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
-        return $this->db->insert_batch('shopping', $insertion);  
+        $course_id_a = $data["shop"];
+        foreach($course_id_a as $course_id)
+        {
+            $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
+            $this->db->insert_batch('shopping', $insertion);
+        }  
     }
     
     # Add courses from 'shopping' to 'taking'
-    # TODO: if taken, dele from shopping
+    # TODO: if taken, delete from shopping
     public function take($data)
     {
         $user_id = '1';
@@ -114,6 +117,8 @@ class Model extends CI_Model {
         {
             $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
             $this->db->insert_batch('taking', $insertion);
+            $where = array('course_id'=>$course_id, 'user_id'=>$user_id);
+            $this->db->delete('shopping', $where);
         }
         
         
