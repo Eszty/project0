@@ -6,6 +6,22 @@
 class Model extends CI_Model {
 
 
+    public function home()
+    {
+        $user_id = 1;
+        $this->db->select('course_id');
+        $c_id= $this->db->get_where('taking', array('user_id'=>$user_id))->result();
+                
+        $array=array();
+        foreach ($c_id as $cor_id)
+        {          
+           $a= $this->db->get_where('courses', array('id'=>($cor_id->course_id)))->result();
+           array_push($array,$a);
+        }
+        
+        return $array;
+    }
+
     # Function to get the content of the table 'courses'
     # TODO: Remove duplicates
 	public function get_courses($data) 
