@@ -14,7 +14,7 @@ even when more are checked and/or the last one is NOT checked -->
                 <p><?php echo $input->title; ?></p>
                 <p><?php echo $input->description; ?></p>
                 <p><?php echo $input->instructor; ?></p>
-                <input type="checkbox" name="shop" id="shop" value="1" > Shop <br> 
+                <input type="checkbox" name="shop[]" id="shop" value="<?php echo $input->id?>" > Shop <br> 
                 <input type="hidden" name="shopping" value="<?php echo $input->id?>" />
                 <p><?php echo '-----------------------------------'; ?></p>
                 <?php endforeach; ?>

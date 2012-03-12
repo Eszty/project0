@@ -6,6 +6,22 @@
 class Model extends CI_Model {
 
 
+    public function home()
+    {
+        $user_id = 1;
+        $this->db->select('course_id');
+        $c_id= $this->db->get_where('taking', array('user_id'=>$user_id))->result();
+                
+        $array=array();
+        foreach ($c_id as $cor_id)
+        {          
+           $a= $this->db->get_where('courses', array('id'=>($cor_id->course_id)))->result();
+           array_push($array,$a);
+        }
+        
+        return $array;
+    }
+
     # Function to get the content of the table 'courses'
     # TODO: Remove duplicates
 	public function get_courses($data) 
@@ -99,19 +115,29 @@ class Model extends CI_Model {
 	public function add_shop($data)
     { 
         $user_id = '1';
-        $course_id = $data["shopping"];
-        $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
-        return $this->db->insert_batch('shopping', $insertion);  
+        $course_id_a = $data["shop"];
+        foreach($course_id_a as $course_id)
+        {
+            $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
+            $this->db->insert_batch('shopping', $insertion);
+        }  
     }
     
     # Add courses from 'shopping' to 'taking'
-    # TODO: if taken, dele from shopping
+    # Delete added courses from shopping
     public function take($data)
     {
         $user_id = '1';
-        $course_id = $data["shopping"];
-        $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
-        return $this->db->insert_batch('taking', $insertion);
+        $course_id_a = $data["shop"];
+        foreach($course_id_a as $course_id)
+        {
+            $insertion = array(array('course_id'=>$course_id, 'user_id'=>$user_id));
+            $this->db->insert_batch('taking', $insertion);
+            $where = array('course_id'=>$course_id, 'user_id'=>$user_id);
+            $this->db->delete('shopping', $where);
+        }
+        
+        
     }
     
     public function xmlparse($data)

@@ -12,7 +12,7 @@ simultaniously-->
             foreach ($posts as $post):
                 foreach ($post as $post_c): ?>
                     <p><?php echo $post_c->title; ?></p>
-                    <input type="checkbox" name="shop" id="shop" value="1" > Take <br>
+                    <input type="checkbox" name="shop[]" id="shop" value="<?php echo $post_c->id?>" > Take <br>
                     <input type="hidden" name="shopping" value="<?php echo $post_c->id?>" />
                 <?php endforeach; ?>
             <?php endforeach; ?>
