@@ -108,7 +108,7 @@ class Model extends CI_Model {
     }
     
     # Add courses from 'shopping' to 'taking'
-    # TODO: if taken, delete from shopping
+    # Delete added courses from shopping
     public function take($data)
     {
         $user_id = '1';
