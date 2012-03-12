@@ -1,6 +1,6 @@
 <?php 
 
-class Taking extends CI_Controller 
+class XML extends CI_Controller 
 {
     public function index() 
     {
