@@ -146,7 +146,63 @@ class Model extends CI_Model {
        $xml = new SimpleXMLElement($xmlstr); 
        foreach ($xml->course as $course) 
        {
-            echo $course->title, '<br />';
+            # Course title
+            $title = $course->title;
+            
+            # Department number
+            foreach($xml->course->department as $dep)
+            {
+                $dep_code = $dep['code'];
+            }
+            
+            # Course number
+            foreach($xml->course->cat_num as $c_n)
+            {
+                $cat_num = $c_n['cat_num'];
+            }
+            
+            # Course description
+            $description = $course->description;
+            
+            if($course->faculty_list->faculty)
+            {
+                $instr = $course->faculty_list->faculty->name->last;
+            }
+            else 
+            {
+                $instr = 'Not know';
+            }
+            
+            if($course->meeting_locations->location)
+            {
+                $location = $course->meeting_locations->location['building'];
+            }
+            else
+            {
+                $location = 'Unknown';
+            }
+            echo $location;
+            
+            if($course->schedule->meeting)
+            {
+                $day = array($course->schedule->meeting['day']);
+                $begin_time = array($course->schedule->meeting['begin_time']);
+            }
+            else
+            {
+                $day = 'Unknown';
+            }
+            /*if($day != 'Unknown')
+            {
+                foreach($day as $d)
+                {
+                    echo $d;
+                }
+            }*/
+            
+            
+            
+             
        }
        return true;
     }
