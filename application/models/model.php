@@ -224,9 +224,8 @@ class Model extends CI_Model {
             $unknown = array();
             if($course->schedule->meeting)
             {
-                $day = array($course->schedule->meeting['day']);
-                $begin_time = array($course->schedule->meeting['begin_time']);
-                echo $day;
+                $day = $course->schedule->meeting['day'];
+                $begin_time = $course->schedule->meeting['begin_time'];
                 array_push($known, $day);
                 array_push($known, $begin_time);
                 array_push($all, $known);
