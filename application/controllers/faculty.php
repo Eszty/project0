@@ -8,7 +8,6 @@ class Faculty extends CI_Controller
         $posts = $this->Model->get_faculty();
         #var_dump($posts);
         $this->load->view('views/faculty.php', array('posts' => $posts));
-        #$this->Model->xmlparse();
     }
 }
 

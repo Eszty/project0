@@ -140,11 +140,15 @@ class Model extends CI_Model {
     
     public function xmlparse()
     {
-       $xmlstr = "http://cdn.cs164.net/2012/spring/projects/0/courses.xml" 
+       # TODO: add courses + details to DB
+       #$xmlstr = "http://cdn.cs164.net/2012/spring/projects/0/courses.xml";
+       include '../courses.php';
+       $xml = new SimpleXMLElement($xmlstr); 
        foreach ($xml->course as $course) 
        {
-            echo $course->plot, '<br />';
+            echo $course->title, '<br />';
        }
+       return true;
     }
 	
 }
