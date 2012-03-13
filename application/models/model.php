@@ -164,15 +164,31 @@ class Model extends CI_Model {
             # Course description
             $description = $course->description;
             
+            # Instructor name (last name) TODO: full name array
+            $instructor = array();
+            $all = array();
             if($course->faculty_list->faculty)
             {
-                $instr = $course->faculty_list->faculty->name->last;
+                $last = $course->faculty_list->faculty->name->last;
+                $first = $course->faculty_list->faculty->name->first;
+                array_push($instructor, $first);
+                array_push($instructor, $last);
+                array_push($all, $instructor);
             }
             else 
             {
                 $instr = 'Not know';
+                array_push($all, $instr);
+            }
+            foreach($all as $ins)
+            {
+                foreach($ins as $instruc)
+                {
+                    echo $instruc, '</br>';
+                }
             }
             
+            # Course location (building) TODO: room number
             if($course->meeting_locations->location)
             {
                 $location = $course->meeting_locations->location['building'];
@@ -181,8 +197,9 @@ class Model extends CI_Model {
             {
                 $location = 'Unknown';
             }
-            echo $location;
+            #echo $location;
             
+            # Course day and begin time
             if($course->schedule->meeting)
             {
                 $day = array($course->schedule->meeting['day']);
