@@ -138,6 +138,7 @@ class Model extends CI_Model {
         } 
     }
     
+    # XML parser
     public function xmlparse()
     {
        # TODO: add courses + details to DB
@@ -164,9 +165,10 @@ class Model extends CI_Model {
             # Course description
             $description = $course->description;
             
-            # Instructor name (last name) TODO: full name array
+            # Course instructor
             $instructor = array();
             $all = array();
+            $unknown = array();
             if($course->faculty_list->faculty)
             {
                 $last = $course->faculty_list->faculty->name->last;
@@ -177,49 +179,72 @@ class Model extends CI_Model {
             }
             else 
             {
-                $instr = 'Not know';
-                array_push($all, $instr);
+                array_push($unknown, 'Unknown');
+                array_push($all, $unknown);
             }
-            foreach($all as $ins)
+            /*foreach($all as $ins)
             {
                 foreach($ins as $instruc)
                 {
                     echo $instruc, '</br>';
                 }
-            }
+            }*/
             
-            # Course location (building) TODO: room number
+            # Course location (building) 
+            $location = array();
+            $all = array();
+            $unknow = array();
             if($course->meeting_locations->location)
             {
-                $location = $course->meeting_locations->location['building'];
+                $building = $course->meeting_locations->location['building'];
+                $room = $course->meeting_locations->location['room'];
+                array_push($location, $building);
+                array_push($location, $room);
+                array_push($all, $location);
             }
             else
             {
-                $location = 'Unknown';
+                $un = 'Unknown';
+                array_push($unknown, $un);
+                array_push($all, $unknown);
             }
-            #echo $location;
             
-            # Course day and begin time
-            if($course->schedule->meeting)
+            /*foreach($all as $loc)
             {
-                $day = array($course->schedule->meeting['day']);
-                $begin_time = array($course->schedule->meeting['begin_time']);
-            }
-            else
-            {
-                $day = 'Unknown';
-            }
-            /*if($day != 'Unknown')
-            {
-                foreach($day as $d)
+                foreach($loc as $loc_all)
                 {
-                    echo $d;
+                    echo $loc_all, '</br>';
                 }
             }*/
             
             
-            
-             
+            # Course day and begin time
+            $known = array();
+            $all = array();
+            $unknown = array();
+            if($course->schedule->meeting)
+            {
+                $day = array($course->schedule->meeting['day']);
+                $begin_time = array($course->schedule->meeting['begin_time']);
+                echo $day;
+                array_push($known, $day);
+                array_push($known, $begin_time);
+                array_push($all, $known);
+            }
+            else
+            {
+                $day_u = 'Unknown';
+                array_push($unknown, $day_u);
+                array_push($all, $unknown);
+            }
+            foreach($all as $days)
+            {
+                foreach($days as $day_all)
+                {
+                    echo $day_all, '</br>';
+                }
+            }
+          
        }
        return true;
     }
