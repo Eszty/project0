@@ -148,24 +148,29 @@ class Model extends CI_Model {
        foreach ($xml->course as $course) 
        {
             # Course title
+            # only title
             $title = $course->title;
             
             # Department number
+            # only the code
             foreach($xml->course->department as $dep)
             {
                 $dep_code = $dep['code'];
             }
             
             # Course number
+            # only the number
             foreach($xml->course->cat_num as $c_n)
             {
                 $cat_num = $c_n['cat_num'];
             }
             
             # Course description
+            # only the description
             $description = $course->description;
             
             # Course instructor
+            # array of arrays => [[first, last], [unknown],...]
             $instructor = array();
             $all = array();
             $unknown = array();
@@ -191,6 +196,7 @@ class Model extends CI_Model {
             }*/
             
             # Course location (building) 
+            # array of arrays => [[building,room],[unknown]...]
             $location = array();
             $all = array();
             $unknow = array();
@@ -219,6 +225,7 @@ class Model extends CI_Model {
             
             
             # Course day and begin time
+            # array of arrays => [[day_number, begin_time], [unknown]...]
             $known = array();
             $all = array();
             $unknown = array();
@@ -243,8 +250,12 @@ class Model extends CI_Model {
                     echo $day_all, '</br>';
                 }
             }
-          
+  
        }
+       /* TODO: forloop through all the arrays
+       Maybe one big array with all the arrays and everything else
+       Probably multiple if-statements
+       Everytime a row (course with details) is added, also add an id (auto increment) with $this->db->insert_id();*/
        return true;
     }
 	
