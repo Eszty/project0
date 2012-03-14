@@ -256,6 +256,8 @@ class Model extends CI_Model {
        Maybe one big array with all the arrays and everything else
        Probably multiple if-statements
        Everytime a row (course with details) is added, also add an id (auto increment) with $this->db->insert_id();*/
+       
+       
        return true;
     }
 	
