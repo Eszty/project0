@@ -16,11 +16,12 @@
 <div data-role="page">
 
 	<div data-role="header">
-		<h1>Single page</h1>
+		<h1>Home</h1>
 	</div><!-- /header -->
 
-	<div data-role="content">	
-        Home page. 
+	<div data-role="content" id = "taking">	
+        <h5>You're currently taking these courses:</h5>
+        
 	</div><!-- /content -->
 	
 
