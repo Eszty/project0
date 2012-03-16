@@ -23,8 +23,11 @@ simultaniously
 -->
 
 <div data-role = "page" id = "shops" data-theme = "a">
+    <div data-role = "header">
+        <h1>Shopping</h1>
+    </div>
     <div data-role = "content">
-    <?php
+        <?php
             foreach ($posts as $post):
                 foreach ($post as $post_c): ?>
                     <p><?php echo $post_c->title; ?></p>
@@ -33,5 +36,9 @@ simultaniously
                 <?php endforeach; ?>
         <?php endforeach; ?>
     </div>
+    <div data-role="footer" data-theme="a">
+		<h5>Project0 by Eszter Fodor</h5>
+	</div><!-- /footer -->
+</div>
 
 

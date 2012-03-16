@@ -15,7 +15,6 @@
 
 <div data-role="page"  id = "home" data-theme = "a">
 
-
 	<div data-role="header">
 		<h1>Home</h1>
 	</div><!-- /header -->
@@ -31,14 +30,14 @@
         
         <p><a href="#shopping" data-role="button">Shopping cart</a></p>
         <p><a href="#search" data-role="button">Search</a></p>
-        
-        
+    
 	</div><!-- /content -->
     <div data-role="footer" data-theme="a">
 		<h5>Project0 by Eszter Fodor</h5>
 	</div><!-- /footer -->
 </div><!-- /page one -->
 	
+<!----------------------------------------------------------------->
 <div data-role = "page" id = "shopping" data-theme = "a">
         <div data-role = "header">
             <h1>Shopping cart</h1>
@@ -47,7 +46,7 @@
         <div data-role = "content" >
         <h4>You're currently have these courses in your shopping cart:</h4>
             <ul>
-                <li><a href = "shopping.php">bla</a></li>
+                <li><a href = "/shopping.php">bla</a></li>
             </ul>
         </div>
     
@@ -56,6 +55,7 @@
 	</div><!-- /footer -->
 </div><!-- /page shopping -->
 
+<!----------------------------------------------------------------->
 <div data-role = "page" id = "search" data-theme = "a">
         <div data-role = "header">
             <h1>Search</h1>
