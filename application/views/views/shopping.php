@@ -22,6 +22,16 @@ simultaniously
 </html>
 -->
 
-
+<div data-role = "page" id = "shops" data-theme = "a">
+    <div data-role = "content">
+    <?php
+            foreach ($posts as $post):
+                foreach ($post as $post_c): ?>
+                    <p><?php echo $post_c->title; ?></p>
+                    <!--TODO: CHECKBOXES<input type="checkbox" name="shop[]" id="shop" value="<?php echo $post_c->id?>" > Take <br>
+                    <input type="hidden" name="shopping" value="<?php echo $post_c->id?>" />-->
+                <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
 
 

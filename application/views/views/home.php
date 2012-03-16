@@ -46,20 +46,15 @@
         
         <div data-role = "content" >
         <h4>You're currently have these courses in your shopping cart:</h4>
-        <?php
-            foreach ($posts as $post):
-                foreach ($post as $post_c): ?>
-                    <p><?php echo $post_c->title; ?></p>
-                    <!--TODO: CHECKBOXES<input type="checkbox" name="shop[]" id="shop" value="<?php echo $post_c->id?>" > Take <br>
-                    <input type="hidden" name="shopping" value="<?php echo $post_c->id?>" />-->
-                <?php endforeach; ?>
-        <?php endforeach; ?>
-    </div>
+            <ul>
+                <li><a href = "shopping.php">bla</a></li>
+            </ul>
+        </div>
     
     <div data-role="footer" data-theme="a">
 		<h5>Project0 by Eszter Fodor</h5>
 	</div><!-- /footer -->
-</div><!-- /page two -->
+</div><!-- /page shopping -->
 
 <div data-role = "page" id = "search" data-theme = "a">
         <div data-role = "header">
@@ -74,7 +69,7 @@
     <div data-role="footer" data-theme="a">
 		<h5>Project0 by Eszter Fodor</h5>
 	</div><!-- /footer -->
-</div><!-- /page two -->
+</div><!-- /page search -->
 	
 
 	

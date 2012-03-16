@@ -90,7 +90,7 @@ class Model extends CI_Model {
     # Get the courses that the user is shopping (list of course names)
     public function get_shopping()
     {
-        $user_id = 1;
+        $user_id = '1';
         $this->db->select('course_id');
         $c_id= $this->db->get_where('shopping', array('user_id'=>$user_id))->result();
                 
