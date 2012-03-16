@@ -8,7 +8,7 @@ class Model extends CI_Model {
 
     public function home()
     {
-        $user_id = 1;
+        $user_id = 3;
         $this->db->select('course_id');
         $c_id= $this->db->get_where('taking', array('user_id'=>$user_id))->result();
                 

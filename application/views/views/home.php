@@ -13,16 +13,68 @@
 </html>
 -->
 
-<div data-role="page">
+<div data-role="page"  id = "home" data-theme = "a">
+
 
 	<div data-role="header">
 		<h1>Home</h1>
 	</div><!-- /header -->
 
-	<div data-role="content" id = "taking">	
-        <h5>You're currently taking these courses:</h5>
+	<div data-role="content" >	
+        <h4>You're currently taking these courses:</h4>
+        <?php
+            foreach ($posts as $post):
+                foreach ($post as $post_c): ?>
+                    <p><?php echo $post_c->title; ?></p>
+                <?php endforeach; ?>
+        <?php endforeach; ?>
+        
+        <p><a href="#shopping" data-role="button">Shopping cart</a></p>
+        <p><a href="#search" data-role="button">Search</a></p>
+        
         
 	</div><!-- /content -->
+    <div data-role="footer" data-theme="a">
+		<h5>Project0 by Eszter Fodor</h5>
+	</div><!-- /footer -->
+</div><!-- /page one -->
+	
+<div data-role = "page" id = "shopping" data-theme = "a">
+        <div data-role = "header">
+            <h1>Shopping cart</h1>
+        </div>
+        
+        <div data-role = "content" >
+        <h4>You're currently have these courses in your shopping cart:</h4>
+        <?php
+            foreach ($posts as $post):
+                foreach ($post as $post_c): ?>
+                    <p><?php echo $post_c->title; ?></p>
+                    <!--TODO: CHECKBOXES<input type="checkbox" name="shop[]" id="shop" value="<?php echo $post_c->id?>" > Take <br>
+                    <input type="hidden" name="shopping" value="<?php echo $post_c->id?>" />-->
+                <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
+    
+    <div data-role="footer" data-theme="a">
+		<h5>Project0 by Eszter Fodor</h5>
+	</div><!-- /footer -->
+</div><!-- /page two -->
+
+<div data-role = "page" id = "search" data-theme = "a">
+        <div data-role = "header">
+            <h1>Search</h1>
+        </div>
+        
+        <div data-role = "content" >
+        <h4>Search for courses:</h4>
+        <!--TODO: Form for searching -->
+    </div>
+    
+    <div data-role="footer" data-theme="a">
+		<h5>Project0 by Eszter Fodor</h5>
+	</div><!-- /footer -->
+</div><!-- /page two -->
 	
 
 	

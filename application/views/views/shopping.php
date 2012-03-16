@@ -1,7 +1,7 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
 <!--TODO: Same problem as shopping, must be able to add more courses
-simultaniously-->
+simultaniously
     <head>
         <title>Shopping</title>
     </head>
@@ -20,3 +20,8 @@ simultaniously-->
         </form>
     </body>
 </html>
+-->
+
+
+
+

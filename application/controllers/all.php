@@ -5,15 +5,13 @@ class All extends CI_Controller
     public function index() 
     {
         $this->load->model('Model');
-        #$posts = $this->Model->home();
-        $this->load->view('views/home.php');
-        #$this->load->view('views/taking.php', array('posts' => $posts)); 
+        $posts = $this->Model->home();
+        $shop = $this->Model->get_shopping();
+        $this->load->view('views/home.php', array('posts' => $posts));
+        $this->load->view('views/shopping.php', array('posts' => $shop));
         $this->load->view('views/header.php');
-        $posts = $this->Model->get_faculty();
-      
-        #$this->load->view('views/faculty.php', array('posts' => $posts));
-        
         $this->load->view('views/footer.php');
+
         
     }
 
