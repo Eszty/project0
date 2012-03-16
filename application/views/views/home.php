@@ -1,6 +1,6 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
-<!--TODO: home page with links to other pages-->
+<!--TODO: home page with links to other pages
     <head>
         <title>Home</title>
     </head>
@@ -11,3 +11,19 @@
         <a href="/search">Search</a></br>
     </body>
 </html>
+-->
+
+<div data-role="page">
+
+	<div data-role="header">
+		<h1>Single page</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">	
+        Home page. 
+	</div><!-- /content -->
+	
+
+	
+
+
