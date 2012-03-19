@@ -25,11 +25,11 @@
         
         <div data-role = "content" >
         <h4>Search for courses:</h4>
-            <form action="~/vhosts/project0/contollers/search.php" method = "post">
+            <form action="#results" method = "post">
                 <fieldset>
                     <div data-role="fieldcontain">
 	                    <label for="course_name">Course title:</label>
-	                    <input type="text" name="name" id="course" value=""/>
+	                    <input type="text" name="name" id="name" value=""/>
 			        </div>
 			    </fieldset>
 			</form>
