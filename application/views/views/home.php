@@ -38,21 +38,7 @@
 </div><!-- /page one -->
 	
 
-<!----------------------------------------------------------------->
-<div data-role = "page" id = "search" data-theme = "a">
-        <div data-role = "header">
-            <h1>Search</h1>
-        </div>
-        
-        <div data-role = "content" >
-        <h4>Search for courses:</h4>
-        <!--TODO: Form for searching -->
-    </div>
-    
-    <div data-role="footer" data-theme="a">
-		<h5>Project0 by Eszter Fodor</h5>
-	</div><!-- /footer -->
-</div><!-- /page search -->
+
 	
 
 	

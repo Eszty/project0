@@ -1,6 +1,7 @@
+<!--
 <!doctype html>
 <html>
-<!-- TODO: Make it look pretier -->
+<!-- TODO: Make it look pretier 
     <head>
         <title>Search</title>
     </head>
@@ -15,4 +16,26 @@
             <input type="submit" value="Search" />
         </form>
     </body>
-</html>
+</html>-->
+
+<div data-role = "page" id = "search" data-theme = "a">
+        <div data-role = "header">
+            <h1>Search</h1>
+        </div>
+        
+        <div data-role = "content" >
+        <h4>Search for courses:</h4>
+            <form action="~/vhosts/project0/contollers/search.php" method = "post">
+                <fieldset>
+                    <div data-role="fieldcontain">
+	                    <label for="course_name">Course title:</label>
+	                    <input type="text" name="name" id="course" value=""/>
+			        </div>
+			    </fieldset>
+			</form>
+        </div>
+    
+    <div data-role="footer" data-theme="a">
+		<h5>Project0 by Eszter Fodor</h5>
+	</div><!-- /footer -->
+</div><!-- /page search -->

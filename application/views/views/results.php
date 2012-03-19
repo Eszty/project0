@@ -1,7 +1,5 @@
-<!doctype html>
+<!--<!doctype html>
 <html>
-<!--TODO: If done is clicked, only the last course will be added,
-even when more are checked and/or the last one is NOT checked -->
     <head>
         <title>Search Results</title>
     </head>
@@ -22,4 +20,22 @@ even when more are checked and/or the last one is NOT checked -->
         <input type="submit" value="Done" />
         </form>
     </body>
-</html>
+</html>-->
+
+<div data-role = "page" id = "results" data-theme = "a">
+    <div data-role = "header">
+        <h1>Results</h1>
+    </div>
+    <div data-role = "content">
+        <?php
+            foreach ($res as $post):
+                foreach ($post as $post_c): ?>
+                    <p><?php echo $post_c->cat_num; ?></p>
+                    <p><?php echo $post_c->title; ?></p>
+                <?php endforeach; ?>
+        <?php endforeach; ?>
+    </div>
+    <div data-role="footer" data-theme="a">
+		<h5>Project0 by Eszter Fodor</h5>
+	</div><!-- /footer -->
+</div>
