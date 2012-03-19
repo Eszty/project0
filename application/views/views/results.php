@@ -27,6 +27,9 @@
         <h1>Results</h1>
     </div>
     <div data-role = "content">
+        <form action="index.html" method="get">
+        <div class="ui-body ui-body-d ui-corner-all">
+        <?php echo "<p> " . $_REQUEST['course_name'] . "</p>";?>
         <?php
             foreach ($res as $post):
                 foreach ($post as $post_c): ?>

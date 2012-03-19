@@ -25,7 +25,7 @@
         
         <div data-role = "content" >
         <h4>Search for courses:</h4>
-            <form action="#results" method = "post">
+            <form action="#results" method = "post" class="ui-body ui-body-d ui-corner-all">
                 <fieldset>
                     <div data-role="fieldcontain">
 	                    <label for="course_name">Course title:</label>
