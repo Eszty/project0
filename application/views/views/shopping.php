@@ -22,6 +22,7 @@ simultaniously
 </html>
 -->
 
+
 <div data-role = "page" id = "shops" data-theme = "a">
     <div data-role = "header">
         <h1>Shopping</h1>
