@@ -17,7 +17,7 @@ class All extends CI_Controller
          
         $data = $this->input->post();
         $res = $this->Model->get_courses($data);
-        var_dump($data);
+
         $this->load->view('views/results.php', array('res' => $res));
        
         $this->load->view('views/header.php');

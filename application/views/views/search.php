@@ -29,10 +29,17 @@
                 <fieldset>
                     <div data-role="fieldcontain">
 	                    <label for="course_name">Course title:</label>
-	                    <input type="text" name="name" id="name" value=""/>
+	                    <input type="text" name="name" id="name" value=""/></br>
+	                    <label for="catalog_num">Catalog number:</label>
+	                    <input type="text" name="number" id="number" value=""/></br>
+	                    <label for="instructor">Instructor's name:</label>
+	                    <input type="text" name="instr" id="instr" value=""/></br>
+	                    <label for="day">Day:</label>
+	                    <input type="text" name="day" id="day" value=""/>
 			        </div>
 			    </fieldset>
 			</form>
+			<p><a href="#home" data-role="button">Go to Home</a></p>
         </div>
     
     <div data-role="footer" data-theme="a">

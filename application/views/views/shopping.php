@@ -36,6 +36,7 @@ simultaniously
                     <input type="hidden" name="shopping" value="<?php echo $post_c->id?>" />-->
                 <?php endforeach; ?>
         <?php endforeach; ?>
+        <p><a href="#home" data-role="button">Go to Home</a></p>
     </div>
     <div data-role="footer" data-theme="a">
 		<h5>Project0 by Eszter Fodor</h5>
